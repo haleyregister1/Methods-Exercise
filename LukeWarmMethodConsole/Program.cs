@@ -19,7 +19,7 @@ namespace LukeWarmMethodConsole
             InTensRange(0);
             MultiTable(0, 0);
             RandomGenArray(0);
-            SumOfArray(0);
+            SumOfArray(RandomGenArray(0));
             CubeNumbers(0);
         }
         static public void ThousandsList()
@@ -194,18 +194,18 @@ namespace LukeWarmMethodConsole
         }
         static public int SumOfArray(int[] totalSums)
         {
-            int b = 0;
+            int totalSum = 0;
 
             foreach (int totalNumber in totalSums)
             {
-                b += totalNumber;
+                totalSum += totalNumber;
             }
-            return b;
+            return totalSum;
         }
         static public string CubeNumbers(int cubed)
         {
             Console.WriteLine("Give me a number to cube:");
-            int cubed = int.Parse(Console.ReadLine());
+            cubed = int.Parse(Console.ReadLine());
 
             int cube = cubed * cubed * cubed;
             return $"{cubed} cubed is {cube}";
