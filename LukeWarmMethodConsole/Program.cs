@@ -200,7 +200,7 @@ namespace LukeWarmMethodConsole
             int sum = 0;
             Array.ForEach(totalSums, i => sum += i);
 
-            Console.WriteLine($"The array added together is {sum}");
+            Console.WriteLine($"The array added together is: {sum}");
             Console.WriteLine("");
         }
         static public void CubeNumbers(int cubed)
