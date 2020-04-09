@@ -189,7 +189,7 @@ namespace LukeWarmMethodConsole
 
             for (int i = 0; i < b.Length; i++)
             {
-                b[i] = randNum.Next();
+                b[i] = randNum.Next(1001);
                 Console.WriteLine(b[i] + " ");
                 Console.WriteLine("");
             }
@@ -212,3 +212,4 @@ namespace LukeWarmMethodConsole
         }
     }
 }
+
