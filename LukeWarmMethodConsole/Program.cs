@@ -8,9 +8,11 @@ namespace LukeWarmMethodConsole
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Methods Exercise 3: LukeWarm");
-
+            Console.WriteLine("Here is a list between 1000 and -1000");
+            Console.ReadLine();
             ThousandsList();
+            Console.WriteLine("Here is that list by threes:");
+            Console.ReadLine();
             ThousandsByThrees();
             EqualTo(0, 0);
             EvenOROdd(0);
@@ -18,8 +20,9 @@ namespace LukeWarmMethodConsole
             AgeCandidate(0);
             InTensRange(0);
             MultiTable(0, 0);
-            RandomGenArray(0);
-            SumOfArray(RandomGenArray(0));
+            int[] arr = RandomGenArray(0);
+            SumOfArray(arr);
+            Console.WriteLine("Give me a number to cube: ");
             CubeNumbers(0);
         }
         static public void ThousandsList()
@@ -192,23 +195,20 @@ namespace LukeWarmMethodConsole
             }
             return b;
         }
-        static public int SumOfArray(int[] totalSums)
+        static public void SumOfArray(int[] totalSums)
         {
-            int totalSum = 0;
+            int sum = 0;
+            Array.ForEach(totalSums, i => sum += i);
 
-            foreach (int totalNumber in totalSums)
-            {
-                totalSum += totalNumber;
-            }
-            return totalSum;
+            Console.WriteLine($"The array added together is {sum}");
+            Console.WriteLine("");
         }
-        static public string CubeNumbers(int cubed)
+        static public void CubeNumbers(int cubed)
         {
-            Console.WriteLine("Give me a number to cube:");
             cubed = int.Parse(Console.ReadLine());
 
             int cube = cubed * cubed * cubed;
-            return $"{cubed} cubed is {cube}";
+            Console.WriteLine($"{cubed} cubed is {cube}");
         }
     }
 }
